@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="bootx64.efi" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="-machine ubuntu -drive if=pflash,format=raw,readonly=on,file=OVMF_CODE-pure-efi.fd -drive format=raw,file=UefiShell.iso -drive format=raw,file=fat:rw:root" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$/hello" PASS_PARENT_ENVS_2="true" PROJECT_NAME="uefi-tui" TARGET_NAME="bootx64.efi" CONFIG_NAME="bootx64.efi" version="1" RUN_PATH="/usr/bin/qemu-system-x86_64">
+    <method v="2">
+      <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_Copy to esp" />
+    </method>
+  </configuration>
+</component>
