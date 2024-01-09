@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="machine" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-machine ubuntu -drive if=pflash,format=raw,readonly=on,file=ovmf.flash -drive format=raw,file=UefiShell.iso -drive file=app.disk,index=1,media=disk,format=raw" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$/hello" PASS_PARENT_ENVS_2="true" PROJECT_NAME="uefi-tui" TARGET_NAME="EDK2" CONFIG_NAME="EDK2" RUN_PATH="/usr/bin/qemu-system-x86_64">
+    <method v="2">
+      <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+    </method>
+  </configuration>
+</component>
