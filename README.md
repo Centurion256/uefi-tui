@@ -1,10 +1,18 @@
 # uefi-tui <br>
 # A simple port of ncurses to UEFI.
+## Team members:
+- [Pavlo Kryven](https://github.com/codefloww)
+- [Anastasiia Shvets](https://github.com/shnasta)
+- [Anna Polova](https://github.com/Annnnya)
+- [Andrii Yaroshevych](https://pbs.twimg.com/media/F-bInKaWIAA2LoW?format=jpg&name=medium)
+## Mentor:
+- [Volodymyr Kuchynskiy](https://github.com/Centurion256)
 
 ## Prerequisites
 * QEMU(in particular qemu-system-x86_64)
 * GCC
 * GNU Make
+* Ubuntu 23.04(other versions may work, but not tested)
 
 ## Setup and first compilation
 For setup and compilation refer to the [Setup EDK2](https://www.notion.so/Setup-EDK2-with-libc-ce84b1cd720045a8b4ff5e3b440af31c?pvs=4)
@@ -21,6 +29,11 @@ Commands for setup are in the `setup.sh` file.
 > exec "${python_exe:-python3}" "$PROJECT_DIR$/edk2/BaseTools/Source/Python/$cmd/$cmd.py" "$@"
 > ```
 > to the `edk2/BaseTools/BinWrappers/PosixLike/build` file, in order to be able to use some of the Clion ready run configuration described below.
+
+### Move the project internal files to the edk2-libc folder
+- In order to compile our library and application, you need to move the `AppPkgReplacements/Snake` folder to the `edk2-libc/AppPkg/Applications` folder. <br>
+- You also need to insert folders `Include` and `Library` from the `AppPkgReplacements` folder to the `edk2-libc/AppPkg` folder. <br>
+- You have to replace the `edk2-libc/AppPkg/AppPkg.dsc` and `edk2-libc/AppPkg/AppPkg.dec` files with the ones from the `AppPkgReplacements` folder. <br>
 
 Additionally, you can add the `setup.sh` script and `compile.sh` script into run/debug configuration in CLion. <br>
 - For `setup.sh` Shell Script configuration should be used. Setup working directory as the root of the project. <br>
