@@ -32,3 +32,19 @@
   MemoryAllocationLib
   UefiBootServicesTableLib
   ShellCEntryLib
+
+[Protocols]
+  gEfiSimpleTextOutProtocolGuid
+  gEfiSimpleTextInputExProtocolGuid
+  gEfiSimpleTextInProtocolGuid
+  gEfiSimplePointerProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiUgaDrawProtocolGuid
+  gEfiUgaIoProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiDevicePathToTextProtocolGuid
+  gEfiDevicePathFromTextProtocolGuid
+  gEfiDevicePathUtilitiesProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
