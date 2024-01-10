@@ -48,7 +48,7 @@ void clear(void);                   // Clear all text
 void refresh(void);                 // Actually prUINTN the window
 
 // Input functions
-EFI_INPUT_KEY getch(void);                    // Read a single character from the terminal
+EFI_INPUT_KEY *getch(void);                    // Read a single character from the terminal
 UINTN fgetc(IN EFI_FILE_PROTOCOL *File);            // Get character from file.
 UINTN scanw(const CHAR16 *format, ...); // Similar to scanf() with the added capability of getting input from any location on the screen
 UINTN mvscanw(UINTN y, UINTN x, const CHAR16 *format, ...); // Similar to scanw() with cursor movement
