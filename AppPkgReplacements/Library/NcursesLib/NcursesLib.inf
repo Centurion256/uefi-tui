@@ -1,0 +1,34 @@
+## @file
+#  A simple, basic, EDK II native, ncurses library.
+#
+#   Copyright (c) 2010 - 2018, Intel Corporation. All rights reserved.<BR>
+#   SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = NcursesLib
+  FILE_GUID                      = 10b46f32-e3f3-45df-80d9-43d6d7028d4a
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = NcursesLib|DXE_DRIVER DXE_RUNTIME_DRIVER UEFI_APPLICATION UEFI_DRIVER
+
+#
+#  VALID_ARCHITECTURES           = IA32 X64 AARCH64
+#
+
+
+[Sources]
+  NcursesLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+  AppPkg/AppPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  MemoryAllocationLib
+  UefiBootServicesTableLib
+  ShellCEntryLib
