@@ -14,7 +14,6 @@
 #include  <Library/BaseLib.h>
 #include <Protocol/SimpleTextInEx.h>
 #include <Library/PrintLib.h>
-// #include <stdbool.h>
 
 
 // Define a WINDOW structure for representing a window
@@ -49,7 +48,7 @@ void clear(void);                   // Clear all text
 void refresh(void);                 // Actually prUINTN the window
 
 // Input functions
-UINTN getch(void);                    // Read a single character from the terminal
+EFI_INPUT_KEY getch(void);                    // Read a single character from the terminal
 UINTN fgetc(IN EFI_FILE_PROTOCOL *File);            // Get character from file.
 UINTN scanw(const CHAR16 *format, ...); // Similar to scanf() with the added capability of getting input from any location on the screen
 UINTN mvscanw(UINTN y, UINTN x, const CHAR16 *format, ...); // Similar to scanw() with cursor movement

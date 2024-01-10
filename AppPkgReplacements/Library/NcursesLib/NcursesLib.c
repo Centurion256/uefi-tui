@@ -254,3 +254,15 @@ void clear(void)
     gWindow->cursor_y = 0;
     gWindow->cursor_x = 0;
 }
+
+EFI_INPUT_KEY *getch(void)
+{
+    // Read a single character from the terminal
+    UINTN index;
+    EFI_INPUT_KEY *key = AllocateRuntimeZeroPool(sizeof(EFI_INPUT_KEY));
+
+    gBS->WaitForEvent(1, &gST->ConIn->WaitForKey, &index);
+    gST->ConIn->ReadKeyStroke(gST->ConIn, key);
+
+    return key;
+}
